@@ -1,5 +1,5 @@
 
-Case Filter v1.2
+Case Filter v2.2
 
 Case Logic Method. A portable accounting protocol and medium-independent tool for working with records (on paper and in dialogue with AI).
 • Author: Irina Vetlugina (Samara, Russia)
