@@ -1,46 +1,54 @@
-# "Case Filter" Tool (Падежный фильтр) v1.2
+# "Case Filter" Tool v1.2 (Падежный фильтр)
 
-**The Dated Record Method. A portable carrier-tool for verifying statements in dialogue with AI.**
+**The Dated Record Method. A portable carrier-tool for verifying claims and reducing hallucinations in dialogue with AI.**
 
-* **Author of the method:** Irina Vetlugina (Samara, Russia)
-* **Key Holder:** User (the human conducting verification in dialogue with AI)
-* **Status:** `[Р]` — working version (tested in Runs #1–#5)
+Author: **Irina Vetlugina** (Samara, Russia).  
+Deposited with **n'RIS**: Registration No. `852-137-831` dated `20.11.2026`.
 
 ---
 
-## What is this tool?
+## License & Terms of Use (Dual License)
 
-Without a formula, grammatical cases are just grammar. With a formula, they become a strict verification filter for records, hypotheses, and statements:
-* **"Mom washed the frame"** — passes (there is an executor, an action, an object, and payment in ticks).
-* **"The frame washed mom"**, **"the frame washed the frame"**, **"mom dreamed of washing"** — fail: the executor's seat is paid with the wrong currency, or the creator's boundary was never crossed.
+* **For Individuals — FREE (Non-Commercial):** Free to use, copy, and share for personal, educational, and non-commercial research purposes, provided the author's name and n'RIS deposit notice remain intact.
+* **For Organizations & Businesses — PAID LICENSE REQUIRED:** Any use by legal entities, entrepreneurs, or for commercial purposes (internal corporate workflows, R&D, analytics, SaaS/AI integration, paid training, or consulting) is strictly prohibited without a separate paid commercial license agreement from the copyright holder.
+* **Full terms:** see [`LICENSE`](./LICENSE).
+* **Commercial licensing & inquiries:** `polutshe@mail.ru`
 
-The tool **does not solve problems** for the user and does not seek "absolute truth." It acts as a strict accountant: it parses records about events and problems, separates actual acts from forecasts, and catches substitutions (the "Zoo" of errors).
+---
 
-## Quick Start
+## Why Use Case Filter?
 
-1. Open the file [`case-filter-v1.2-en.md`](./case-filter-v1.2-en.md) and copy its entire content.
-2. Paste the text at the very beginning of a new dialogue with any LLM (ChatGPT, Claude, Gemini, DeepSeek, etc.).
-3. Submit any record or list of statements using the command:
+Large Language Models tend to present hypotheses and speculation with the same confidence as verified facts. Case Filter shifts AI from "plausible text generation" into a strict record-accounting protocol:
+
+* **Separates facts from hypotheses:** audits every record for its framework Ω(T), paid act, institutional position σ(O), and dated verification window.
+* **Bans ungrounded certainty:** AI is prohibited from using words like *"confirmed"*, *"proven"*, or *"truth"* — only strict protocol statuses (`legal record`, `[R] candidate`, `left edge`, `cell 1`, `false removed`).
+* **Legitimizes refusal to guess:** when external verification criteria are missing, AI must assign `unidentified remainder` instead of hallucinating.
+* **Separates roles:** AI acts strictly as the carrier-executor, while the human user remains the "key holder" responsible for time-based verification.
+
+---
+
+## Quick Start (30 Seconds)
+
+1. Open [`case-filter-v1.2-en.md`](./case-filter-v1.2-en.md) and copy the entire file.
+2. Paste it at the beginning of a new chat with any modern LLM (ChatGPT, Claude, Gemini, DeepSeek, etc.).
+3. Submit any claim or hypothesis using the command:
    ```text
-   RUN: [text of your record]
+   RUN: [your claim, news item, or hypothesis]
    ```
-4. Receive a structured **record card** according to the protocol along with a brief plain-language explanation.
 
-> **Important:** AI acts strictly as a carrier-executor. The verification key for dated windows always remains with the human.
+### Core Commands
+* `RUN: [text]` — analyze a record using the strict protocol card and explanation.
+* `VERIFY: [Ê against fact E]` — verify a prediction against a dated window.
+* `SUMMARY` — output session summary and check for O1–O3 protocol errors.
+* `FORECAST: [Ê] window [date]` — register a candidate prior to verification.
+* `ABLATION: [cell]` — test filter discipline by excluding a specific cell.
 
-## Core Commands
+---
 
-* `RUN: [text]` — parses a record into a protocol card with a mandatory brief explanation.
-* `FORECAST: [Ê] window [date]` — registers a candidate before the act takes place.
-* `VERIFY: [Ê against fact E]` — closes a bet upon reaching the dated window.
-* `SUMMARY` — outputs accumulated operator/model errors (`O1–O3`) for the session.
-* `ABLATION: [cell]` — tests filter discipline by excluding a specified cell.
+## Repository Contents
 
-## Examples & Test Logs
+* [`case-filter-v1.2-en.md`](./case-filter-v1.2-en.md) — main portable protocol file (English).
+* [`case-filter-v1.2.md`](./case-filter-v1.2.md) — Russian version of the protocol.
+* [`run-science-problems-en.md`](./run-science-problems-en.md) — benchmark run of 10 major solved and unsolved science problems.
+* [`LICENSE`](./LICENSE) — full Dual License terms (RU / EN).
 
-The [`/runs`](./runs) folder contains test protocols of the tool applied to complex scientific problems (Fermat's Last Theorem, P vs NP, Riemann Hypothesis, Higgs Boson, etc.). See [`run-science-problems-en.md`](./runs/run-science-problems-en.md).
-
-## How to Contribute
-
-The tool requires **independent blind runs** across different language models. 
-If you conduct a run and spot a failure in classification (`O1`), reading (`O2`), or recording (`O3`), please open an **Issue** in this repository and attach the dialogue log.
