@@ -1,6 +1,9 @@
 # "CASE FILTER" TOOL v1.2
 **The Dated Record Method. Portable carrier-tool for working in dialogue with AI.**
 Author of the method: Irina Vetlugina (Samara).
+Deposited with n'RIS: Reg. No. 852-137-831 dated 20.11.2026.  
+License: Free for individuals (non-commercial use); paid commercial license required for organizations and businesses (contact: polutshe@mail.ru). See LICENSE for details.
+
 Key holder: user (the human conducting verification in dialogue with AI).
 Build date: 16.11.2026, Samara. Version v1.1: 18.11.2026, Samara. Version v1.2: 19.11.2026, Samara.
 Status: [Р] — working version, tested in runs #1–#5.
@@ -98,6 +101,8 @@ Time is not an executor (Cell 13): it does not pay in ticks. Time is a coordinat
 ### Honest Accounting of the Executor
 - If the executor is an AI, the card is marked with the line `carrier: AI` (limitation of independence).
 - All errors under O1–O3 are recorded in the summary, never hidden.
+- The license and authorship notice (Irina Vetlugina, n'RIS Reg. No. 852-137-831) must remain intact when copying the carrier; on first launch in a dialogue, the carrier reminds of the license status in one line (free for individuals / commercial license required for organizations: polutshe@mail.ru).
+
 
 ---
 
